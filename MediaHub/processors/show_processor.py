@@ -323,9 +323,9 @@ def process_show(src_file, root, file, dest_dir, actual_dir, tmdb_folder_id_enab
         proper_show_name_with_ids = proper_show_name
 
         if rename_enabled or is_tmdb_folder_id_enabled() or is_imdb_folder_id_enabled() or is_tvdb_folder_id_enabled():
-            proper_show_name = re.sub(r'\{tmdb-([^}]+)\}', r'{tmdbid-\1}', proper_show_name)
-            proper_show_name = re.sub(r'\{imdb-([^}]+)\}', r'{imdbid-\1}', proper_show_name)
-            proper_show_name = re.sub(r'\{tvdb-([^}]+)\}', r'{tvdbid-\1}', proper_show_name)
+            proper_show_name = re.sub(r'\{tmdbid-([^}]+)\}', r'{tmdb-\1}', proper_show_name)
+            proper_show_name = re.sub(r'\{imdbid-([^}]+)\}', r'{imdb-\1}', proper_show_name)
+            proper_show_name = re.sub(r'\{tvdbid-([^}]+)\}', r'{tvdb-\1}', proper_show_name)
 
         show_folder = proper_show_name
 
