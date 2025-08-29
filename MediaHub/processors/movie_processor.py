@@ -160,9 +160,9 @@ def process_movie(src_file, root, file, dest_dir, actual_dir, tmdb_folder_id_ena
             year = result[3] if result[3] is not None else year
             proper_movie_name = f"{proper_name} ({year})"
             if is_tmdb_folder_id_enabled() and tmdb_id:
-                proper_movie_name += f" {{tmdbid-{tmdb_id}}}"
+                proper_movie_name += f" {{tmdb-{tmdb_id}}}"
             if is_imdb_folder_id_enabled() and imdb_id:
-                proper_movie_name += f" {{imdbid-{imdb_id}}}"
+                proper_movie_name += f" {{imdb-{imdb_id}}}"
 
             # Get TMDB language as fallback if not available from file metadata
             if not language and tmdb_id:
