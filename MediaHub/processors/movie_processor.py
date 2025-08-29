@@ -190,6 +190,7 @@ def process_movie(src_file, root, file, dest_dir, actual_dir, tmdb_folder_id_ena
             return None, None
 
     log_message(f"Found movie: {proper_movie_name}", level="INFO")
+    proper_movie_name = proper_movie_name.replace(':', '')
     movie_folder = proper_movie_name.replace('/', '-')
 
 
