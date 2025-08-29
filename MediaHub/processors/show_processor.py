@@ -319,6 +319,9 @@ def process_show(src_file, root, file, dest_dir, actual_dir, tmdb_folder_id_enab
             log_message(f"TMDb could not provide valid show name for: {show_folder} ({year}). Skipping show processing.", level="ERROR")
             return None
 
+        proper_show_name = proper_show_name.replace(':', '')
+        show_name = show_name.replace(':', '')
+
         # Store the original proper_show_name with all IDs
         proper_show_name_with_ids = proper_show_name
 
